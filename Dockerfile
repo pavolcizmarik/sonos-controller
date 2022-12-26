@@ -12,7 +12,7 @@ RUN npm install && \
     npm run build && \
     mv dist ../server/
 
-WORKDIR ../sonos-controller
+WORKDIR /
 RUN rm -rf client
 
 WORKDIR /server
