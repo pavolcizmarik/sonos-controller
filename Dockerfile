@@ -17,7 +17,7 @@ RUN rm -rf client
 
 WORKDIR /sonos-controller/server
 RUN npm install && \
-	npm install https://github.com/sonos-web/sonos-web.git && \
+	npm install https://github.com/stufisher/node-sonos#v1.15.0-test && \
     mv .env.production .env && \
     printf "\nREGION=EU\n" >> .env && \
     printf "\nENHANCE_METADATA=true\n" >> .env
