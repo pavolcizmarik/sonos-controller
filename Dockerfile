@@ -7,15 +7,15 @@ RUN apt-get update && \
 
 RUN git clone https://github.com/pavolcizmarik/sonos-controller.git
 
-WORKDIR /client
+WORKDIR /sonos-controller/client
 RUN npm install && \
     npm run build && \
     mv dist ../server/
 
-WORKDIR /
+WORKDIR /sonos-controller
 RUN rm -rf client
 
-WORKDIR /server
+WORKDIR /sonos-controller/server
 RUN npm install && \
 	npm install https://github.com/sonos-web/sonos-web.git && \
     mv .env.production .env && \
