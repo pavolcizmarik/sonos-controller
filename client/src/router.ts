@@ -111,17 +111,17 @@ const routes = [
       {
         path: "",
         name: "sonos",
-        redirect: { name: "SonosPlaylists" },
-      },
-      {
-        path: "/sonos/playlists",
-        name: "SonosPlaylists",
-        component: () => import("@/views/sonos/SonosPlaylists.vue"),
+        redirect: { name: "SonosFavorites" },
       },
       {
         path: "/sonos/favorites",
         name: "SonosFavorites",
         component: () => import("@/views/sonos/SonosFavorites.vue"),
+      },
+      {
+        path: "/sonos/playlists",
+        name: "SonosPlaylists",
+        component: () => import("@/views/sonos/SonosPlaylists.vue"),
       },
     ],
   },

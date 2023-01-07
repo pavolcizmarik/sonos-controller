@@ -19,8 +19,8 @@ const props = defineProps({
 });
 
 const tabs = [
-  { title: "Playlists", link: "/sonos/playlists" },
   { title: "Favorites", link: "/sonos/favorites" },
+  { title: "Playlists", link: "/sonos/playlists" },
 ];
 </script>
 
