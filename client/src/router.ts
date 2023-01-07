@@ -106,8 +106,24 @@ const routes = [
   },
   {
     path: "/sonos",
-    name: "Sonos",
     component: () => import("@/views/Sonos.vue"),
+    children: [
+      {
+        path: "",
+        name: "sonos",
+        redirect: { name: "SonosPlaylists" },
+      },
+      {
+        path: "/sonos/playlists",
+        name: "SonosPlaylists",
+        component: () => import("@/views/sonos/SonosPlaylists.vue"),
+      },
+      {
+        path: "/sonos/favorites",
+        name: "SonosFavorites",
+        component: () => import("@/views/sonos/SonosFavorites.vue"),
+      },
+    ],
   },
   {
     path: "/spotify",

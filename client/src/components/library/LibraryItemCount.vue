@@ -15,7 +15,7 @@ const props = defineProps({
     default: "0",
   },
   label: {
-    type: String,
+    type: [String, Array<String>],
     required: true,
   },
 });

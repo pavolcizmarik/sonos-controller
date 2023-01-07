@@ -1,7 +1,7 @@
 {
   "name": "sonos-client",
   "title": "SONOS Controller",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Vite starter template with TailwindCSS",
   "private": true,
   "main": "src/main.ts",

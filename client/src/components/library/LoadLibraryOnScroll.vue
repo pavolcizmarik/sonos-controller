@@ -23,8 +23,8 @@ const props = defineProps({
     default: null,
   },
   searchTerm: {
-    type: String,
-    default: null,
+    type: [String, Array<String>],
+    default: undefined,
   },
 });
 
