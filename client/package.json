@@ -28,7 +28,7 @@
     "axios": "1.2.2",
     "deepmerge": "4.2.2",
     "dotenv": "16.0.3",
-    "js-base64": "3.7.3",
+    "js-base64": "3.7.4",
     "mdue": "0.1.4",
     "nprogress": "0.2.0",
     "pinia": "2.0.28",
