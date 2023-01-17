@@ -18,13 +18,7 @@
               label="Favorites"
             ></library-item-count>
             <div class="xs12 flex flex-wrap justify-center gap-8">
-              <library-item
-                v-for="item in items"
-                :key="item.uri"
-                :item="item"
-                to-prefix=""
-                :is-spotify="false"
-              ></library-item>
+              <song-list :songs="items" />
             </div>
           </div>
         </div>
@@ -43,8 +37,9 @@ import { ref, computed, Ref } from "vue";
 
 import deepmerge from "deepmerge";
 
-// import SongList from "@/components/SongList.vue";
-import LibraryItem from "@/components/library/LibraryItem.vue";
+import ErrorView from "@/components/ErrorView.vue";
+import LoadingView from "@/components/LoadingView.vue";
+import SongList from "@/components/SongList.vue";
 import LibraryItemCount from "@/components/library/LibraryItemCount.vue";
 import LoadLibraryOnScroll from "@/components/library/LoadLibraryOnScroll.vue";
 import musicLibrary from "@/services/API/musicLibrary";
