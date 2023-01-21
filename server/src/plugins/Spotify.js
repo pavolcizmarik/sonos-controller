@@ -205,6 +205,22 @@ class Spotify {
       name: data.body.items[0].artists[0].name,
     };
   }
+
+  async getFeaturedPlaylists() {
+    const data = await this.spotifyApi.getFeaturedPlaylists();
+    const items = data.body.playlists.items.map((item) => ({
+      title: item.name,
+      uri: item.uri,
+      albumArtURI: item.images[0].url,
+    }));
+
+    return {
+      message: data.body.message,
+      total: String(data.body.playlists.total),
+      returned: String(items.length),
+      items,
+    };
+  }
 }
 
 module.exports = Spotify;

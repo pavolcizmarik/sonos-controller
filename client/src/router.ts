@@ -136,6 +136,11 @@ const routes = [
         redirect: { name: "SpotifyPlaylists" },
       },
       {
+        path: "/spotify/discovery",
+        name: "SpotifyDiscovery",
+        component: () => import("@/views/spotify/SpotifyDiscovery.vue"),
+      },
+      {
         path: "/spotify/playlists",
         name: "SpotifyPlaylists",
         component: () => import("@/views/spotify/SpotifyPlaylists.vue"),

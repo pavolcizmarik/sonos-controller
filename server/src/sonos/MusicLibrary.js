@@ -12,8 +12,6 @@ class MusicLibrary {
   constructor(Sonos) {
     this.sonos = Sonos;
 
-    console.log(this.sonos);
-
     if (!this.sonos) { throw new Error(NotASonosDevice); }
 
     this._playlistCache = null;

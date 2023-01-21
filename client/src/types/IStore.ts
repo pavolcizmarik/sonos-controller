@@ -96,15 +96,15 @@ export interface ITrack {
 }
 
 export interface IAlbum {
-  album?: string;
-  albumArtURI?: string;
-  artist?: string;
-  title?: string;
-  uri?: string;
-  name?: string;
-  items?: Array<object>;
-  artistURI?: string;
-  total?: string;
+  album: string;
+  albumArtURI: string;
+  artist: string;
+  title: string;
+  uri: string;
+  name: string;
+  items: Array<object>;
+  artistURI: string;
+  total: string;
 }
 
 export interface IArtists {
@@ -126,11 +126,17 @@ export interface IPlaylist {
 }
 
 export interface IPlaylistItem {
-  album?: string;
-  albumArtURI?: string;
-  albumURI?: string;
-  artist?: string;
-  artistURI?: string;
-  title?: string;
-  uri?: string;
+  album: string;
+  albumArtURI: string;
+  albumURI: string;
+  artist: string;
+  artistURI: string;
+  title: string;
+  uri: string;
+}
+
+export interface IDiscoveryAlbums {
+  message: string;
+  total: number;
+  items: IAlbum[];
 }

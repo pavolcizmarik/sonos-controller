@@ -28,8 +28,16 @@ module.exports = function SpotifyRoutes(spotify) {
     }
   });
 
+  this.router.get('/discovery', async (req, res) => {
+    try {
+      const discovery = await this.spotify.getFeaturedPlaylists();
+      res.status(200).send(discovery);
+    } catch (error) {
+      res.status(500).send(error.message);
+    }
+  });
+
   this.router.get('/playlists', async (req, res) => {
-    console.log(req.query);
     try {
       const playlists = await this.spotify.getUserPlaylists({
         limit: parseInt(req.query.total, 10) || 20,
@@ -132,7 +140,7 @@ module.exports = function SpotifyRoutes(spotify) {
   });
   this.router.get('/artist/:id', async (req, res) => {
     try {
-      const albums = await this.spotify.getArtistAlbums(req.params.id);
+      const albums = await this.spotify.getArtistAlbums();
       res.status(200).send(albums);
     } catch (error) {
       res.status(500).send(error.message);
