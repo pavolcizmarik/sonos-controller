@@ -32,7 +32,7 @@
     "mdue": "0.1.4",
     "nprogress": "0.2.0",
     "pinia": "2.0.30",
-    "sass": "1.58.0",
+    "sass": "1.58.1",
     "socket.io-client": "4.6.0",
     "vue": "3.2.47",
     "vue-router": "4.1.6"
