@@ -14,6 +14,9 @@ export default {
   getUserPlaylists() {
     return axios.get("/playlists");
   },
+  getDiscoveryAlbums() {
+    return axios.get("/discovery");
+  },
   getUserAlbums() {
     return axios.get("/albums");
   },

@@ -11,8 +11,8 @@ import { computed } from "vue";
 
 const props = defineProps({
   total: {
-    type: String,
-    default: "0",
+    type: Number,
+    default: 0,
   },
   label: {
     type: [String, Array<String>],
@@ -20,5 +20,5 @@ const props = defineProps({
   },
 });
 
-const text = computed(() => (props.total === "1" ? props.label.slice(0, -1) : props.label));
+const text = computed(() => (props.total === 1 ? props.label.slice(0, -1) : props.label));
 </script>

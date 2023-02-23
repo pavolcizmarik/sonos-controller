@@ -31,7 +31,10 @@ const route = useRoute();
 const router = useRouter();
 const authorized = ref(false);
 
-const tabs = [{ title: "Playlists", link: "/spotify/playlists" }];
+const tabs = [
+  { title: "Discovery", link: "/spotify/discovery" },
+  { title: "Playlists", link: "/spotify/playlists" },
+];
 
 if (route.query.code) {
   try {
