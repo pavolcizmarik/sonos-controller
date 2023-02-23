@@ -137,6 +137,6 @@ export interface IPlaylistItem {
 
 export interface IDiscoveryAlbums {
   message: string;
-  total: number;
+  total: string;
   items: IAlbum[];
 }
