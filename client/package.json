@@ -31,7 +31,7 @@
     "js-base64": "3.7.5",
     "mdue": "0.1.4",
     "nprogress": "0.2.0",
-    "pinia": "2.0.30",
+    "pinia": "2.0.32",
     "sass": "1.58.3",
     "socket.io-client": "4.6.1",
     "vue": "3.2.47",
